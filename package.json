@@ -1,0 +1,57 @@
+{
+  "name": "doing-design-system",
+  "version": "1.0.0",
+  "description": "a design system built on chromatic",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "chromatic": "chromatic",
+    "chromatic:project": "chromatic --project-token=59tv54qx0fu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adeelibr/doing-design-system.git"
+  },
+  "keywords": [
+    "design",
+    "sytem",
+    "design",
+    "ui",
+    "components",
+    "react"
+  ],
+  "author": "Adeel Imran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adeelibr/doing-design-system/issues"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "chromatic": "^4.0.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
