@@ -17,7 +17,7 @@ https://www.chromatic.com/builds?appId=5eba98dfb991d60022af2f62
 - [x] Integrate Chromatic
 - [x] Add Material-UI
 - [x] Add Basic components i.e, Button, Textfield
-- [ ] Add pipeline [Choose any travic, circle, jenkins, github actions]
+- [x] Add pipeline [Circle CI]
 - [ ] Add complex UI component
 - [ ] Add 3 PR request with changes to UI
 
