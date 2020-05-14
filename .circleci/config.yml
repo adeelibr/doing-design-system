@@ -3,6 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.16.3
+    branches:
+      ignore:
+        - master
+        - /experiment-.*/
     steps:
       - checkout
       - run:
@@ -12,7 +16,5 @@ jobs:
           name: test
           command: npm run test
       - run:
-        name: release to chromatic
-        branches:
-          ignore: master
-        command: npm run chromatic -- --project-token=${chromaticProjectToken} --exit-zero-on-changes
+          name: release to chromatic
+          command: npm run chromatic -- --project-token=${chromaticProjectToken} --exit-zero-on-changes
