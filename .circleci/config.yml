@@ -13,4 +13,4 @@ jobs:
           command: npm run test
       - run:
           name: release to chromatic
-          command: npm run chromatic:project
+          command: npm run chromatic -- --project-token=${chromaticProjectToken}
