@@ -42,11 +42,11 @@
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-links": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
+    "@storybook/addon-actions": "6.0.0-beta.2",
+    "@storybook/addon-links": "6.0.0-beta.2",
+    "@storybook/addons": "6.0.0-beta.2",
     "@storybook/preset-create-react-app": "^2.1.2",
-    "@storybook/react": "^5.3.18",
+    "@storybook/react": "6.0.0-beta.2",
     "chromatic": "^4.0.2"
   },
   "eslintConfig": {
