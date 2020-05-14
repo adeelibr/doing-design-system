@@ -12,5 +12,8 @@ jobs:
           name: test
           command: npm run test
       - run:
-          name: release to chromatic
-          command: npm run chromatic -- --project-token=${chromaticProjectToken}
+        name: release to chromatic
+        filters:
+          branches:
+            ignore: master
+        command: npm run chromatic -- --project-token=${chromaticProjectToken} --exit-zero-on-changes
