@@ -5,6 +5,9 @@ import { Button } from "../../";
 export default {
   title: "Button",
   component: Button,
+  parameters: {
+    chromatic: { viewports: [320, 1200] },
+  },
 };
 
 export const ContainedPrimary = () => (
