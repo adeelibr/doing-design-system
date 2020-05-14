@@ -1,10 +1,6 @@
 version: 2.1
 jobs:
   build:
-    branches:
-      ignore:
-        - master
-        - /experiment-.*/
     docker:
       - image: circleci/node:10.16.3
     steps:
