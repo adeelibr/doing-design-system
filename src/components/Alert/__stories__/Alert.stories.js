@@ -1,6 +1,6 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
 import { Alert, AlertTitle, Button } from "../../";
+import { Box } from "@material-ui/core";
 
 export default {
   title: "Alert",
@@ -18,9 +18,8 @@ export const Variant = () => (
 );
 
 export const WithTitle = () => {
-  const [open, setOpen] = React.useState(true);
   return (
-    <Alert open={open} setOpen={setOpen} onClose={action("clicked")}>
+    <Alert>
       <AlertTitle>Alert</AlertTitle>
       This is an alert — check it out!
     </Alert>
@@ -32,17 +31,17 @@ export const WithAction = () => {
   return (
     <Alert
       open={open}
-      setOpen={setOpen}
+      severity="warning"
       action={
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={(e) => {
-            setOpen(false);
-          }}
-        >
-          Accept
-        </Button>
+        <>
+          <Button color="tertiary" onClick={() => setOpen(false)}>
+            Accept
+          </Button>
+          <Box mr={3} />
+          <Button color="danger" onClick={() => setOpen(false)}>
+            Reject
+          </Button>
+        </>
       }
     >
       This is an alert — check it out!
@@ -50,9 +49,19 @@ export const WithAction = () => {
   );
 };
 
-export const WithActionAndTitle = () => (
-  <Alert action={<Button onClick={action("clicked")}>Undo</Button>}>
-    <AlertTitle>Alert</AlertTitle>
-    This is an alert — check it out!
-  </Alert>
-);
+export const WithTitleAndAction = () => {
+  const [open, setOpen] = React.useState(true);
+  return (
+    <Alert
+      open={open}
+      action={
+        <Button color="tertiary" onClick={() => setOpen(false)}>
+          Undo
+        </Button>
+      }
+    >
+      <AlertTitle>Alert</AlertTitle>
+      This is an alert — check it out!
+    </Alert>
+  );
+};
