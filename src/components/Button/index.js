@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => {
   return {
     root: {
       height: theme.spacing(7), // applied to size="medium"
+      padding: theme.spacing(3, 4),
       borderRadius: theme.spacing(2),
     },
     contained: {
