@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => {
 });
 
 const Button = React.forwardRef((props, ref) => {
-  const classes = useStyles(props);
+  const { color, ...other } = props;
+  const classes = useStyles({ color });
   return (
     <MuiButton
       classes={{
@@ -40,7 +41,7 @@ const Button = React.forwardRef((props, ref) => {
         sizeSmall: classes.sizeSmall,
         sizeLarge: classes.sizeLarge,
       }}
-      {...props}
+      {...other}
     />
   );
 });

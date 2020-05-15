@@ -12,7 +12,7 @@ export default {
 };
 
 export const Contained = () => (
-  <Box display="flex" flexDirection="row">
+  <Box display="flex" flexDirection="row" flexWrap="wrap">
     <Button color="primary" onClick={action("clicked")}>
       Primary
     </Button>
@@ -44,7 +44,7 @@ export const Contained = () => (
 );
 
 export const Outlined = () => (
-  <Box display="flex" flexDirection="row">
+  <Box display="flex" flexDirection="row" flexWrap="wrap">
     <Button variant="outlined" color="primary" onClick={action("clicked")}>
       Primary
     </Button>
@@ -77,7 +77,7 @@ export const Outlined = () => (
 
 export const Size = () => (
   <Box>
-    <Box display="flex" flexDirection="row">
+    <Box display="flex" flexDirection="row" flexWrap="wrap">
       <Button size="small" color="primary" onClick={action("clicked")}>
         Primary
       </Button>
