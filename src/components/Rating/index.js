@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 const CUSTOM_ICONS = {
   0.5: {
     icon: <SentimentVeryDissatisfiedIcon />,
-    label: "Very Dissatisfied",
+    label: "Very Very Dissatisfied",
   },
   1: {
     icon: <SentimentVeryDissatisfiedIcon />,
@@ -70,14 +70,15 @@ IconContainer.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function Rating({ value, onChange }) {
+function Rating(props) {
+  const { value, onChange } = props;
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <MuiRating
         name="customized-icons"
-        precision={0.5}
+        // precision={0.5}
         value={value}
         onChange={(event, newValue) => {
           onChange(newValue);
@@ -94,5 +95,10 @@ function Rating({ value, onChange }) {
     </div>
   );
 }
+
+Rating.propTypes = {
+  value: PropTypes.number,
+  onChange: PropTypes.func,
+};
 
 export default Rating;
