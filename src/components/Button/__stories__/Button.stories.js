@@ -107,7 +107,7 @@ export const Size = () => (
       </Button>
     </Box>
     <Box mb={3} />
-    <Box display="flex" flexDirection="row">
+    <Box display="flex" flexDirection="row" flexWrap="wrap">
       <Button size="medium" color="primary" onClick={action("clicked")}>
         Primary
       </Button>
@@ -137,7 +137,7 @@ export const Size = () => (
       </Button>
     </Box>
     <Box mb={3} />
-    <Box display="flex" flexDirection="row">
+    <Box display="flex" flexDirection="row" flexWrap="wrap">
       <Button size="large" color="primary" onClick={action("clicked")}>
         Primary
       </Button>
